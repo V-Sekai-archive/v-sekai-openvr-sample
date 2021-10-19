@@ -8,5 +8,6 @@ sky_material = SubResource( "1" )
 [resource]
 background_mode = 2
 sky = SubResource( "2" )
+tonemap_exposure = 0.8
 tonemap_white = 16.0
 auto_exposure_enabled = true
