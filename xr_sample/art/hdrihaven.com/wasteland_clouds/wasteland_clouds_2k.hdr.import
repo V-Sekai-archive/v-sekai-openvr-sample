@@ -3,19 +3,21 @@
 importer="texture"
 type="StreamTexture2D"
 uid="uid://c6lpu4nnl0g4n"
-path="res://.godot/imported/wasteland_clouds_2k.hdr-61b21964801438ae7f4f5d72db3f6175.stex"
+path.s3tc="res://.godot/imported/wasteland_clouds_2k.hdr-61b21964801438ae7f4f5d72db3f6175.s3tc.stex"
+path.etc2="res://.godot/imported/wasteland_clouds_2k.hdr-61b21964801438ae7f4f5d72db3f6175.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": ["bptc", "s3tc", "etc2"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://xr_sample/art/hdrihaven.com/wasteland_clouds/wasteland_clouds_2k.hdr"
-dest_files=["res://.godot/imported/wasteland_clouds_2k.hdr-61b21964801438ae7f4f5d72db3f6175.stex"]
+dest_files=["res://.godot/imported/wasteland_clouds_2k.hdr-61b21964801438ae7f4f5d72db3f6175.s3tc.stex", "res://.godot/imported/wasteland_clouds_2k.hdr-61b21964801438ae7f4f5d72db3f6175.etc2.stex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/bptc_ldr=0

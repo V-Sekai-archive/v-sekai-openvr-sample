@@ -6,7 +6,7 @@ uid="uid://din2dfyevlc45"
 path.s3tc="res://.godot/imported/blue_grid.png-5aab474a473f4f8b819a434c1fce5843.s3tc.stex"
 path.etc2="res://.godot/imported/blue_grid.png-5aab474a473f4f8b819a434c1fce5843.etc2.stex"
 metadata={
-"imported_formats": ["s3tc", "etc2"],
+"imported_formats": ["bptc", "s3tc", "etc2"],
 "vram_texture": true
 }
 

@@ -66,6 +66,7 @@ enabled=PackedStringArray("res://addons/godot-openvr/plugin.cfg")
 [importer_defaults]
 
 texture={
+"compress/bptc_ldr": 2,
 "compress/mode": 2
 }
 
@@ -88,6 +89,7 @@ common/physics_fps=90
 [rendering]
 
 driver/threads/thread_model=2
+textures/vram_compression/import_bptc=true
 vulkan/rendering/back_end=1
 xr/enabled=true
 anti_aliasing/quality/msaa=1

@@ -6,7 +6,7 @@ uid="uid://cuv0tit7ygv83"
 path.s3tc="res://.godot/imported/teleport_arrow.png-f1bd44b6f478277692b3fa29171b62d3.s3tc.stex"
 path.etc2="res://.godot/imported/teleport_arrow.png-f1bd44b6f478277692b3fa29171b62d3.etc2.stex"
 metadata={
-"imported_formats": ["s3tc", "etc2"],
+"imported_formats": ["bptc", "s3tc", "etc2"],
 "vram_texture": true
 }
 

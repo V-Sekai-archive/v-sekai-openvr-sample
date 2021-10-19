@@ -6,7 +6,7 @@ uid="uid://dn2ot7jsnovpv"
 path.s3tc="res://.godot/imported/green_metal_rust_rough_1k.jpg-38c088e2e76b1c0a3559f285add680b6.s3tc.stex"
 path.etc2="res://.godot/imported/green_metal_rust_rough_1k.jpg-38c088e2e76b1c0a3559f285add680b6.etc2.stex"
 metadata={
-"imported_formats": ["s3tc", "etc2"],
+"imported_formats": ["bptc", "s3tc", "etc2"],
 "vram_texture": true
 }
 

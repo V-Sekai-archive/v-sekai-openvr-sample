@@ -6,7 +6,7 @@ uid="uid://3awgamogameb"
 path.s3tc="res://.godot/imported/brown_planks_03_diff_1k.jpg-4538d8f8cea5d4caa326e069ca14cbdb.s3tc.stex"
 path.etc2="res://.godot/imported/brown_planks_03_diff_1k.jpg-4538d8f8cea5d4caa326e069ca14cbdb.etc2.stex"
 metadata={
-"imported_formats": ["s3tc", "etc2"],
+"imported_formats": ["bptc", "s3tc", "etc2"],
 "vram_texture": true
 }
 

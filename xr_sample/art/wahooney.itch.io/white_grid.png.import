@@ -6,7 +6,7 @@ uid="uid://c1lir86v3l7om"
 path.s3tc="res://.godot/imported/white_grid.png-ee12cc7c12c4e622224711326a91e641.s3tc.stex"
 path.etc2="res://.godot/imported/white_grid.png-ee12cc7c12c4e622224711326a91e641.etc2.stex"
 metadata={
-"imported_formats": ["s3tc", "etc2"],
+"imported_formats": ["bptc", "s3tc", "etc2"],
 "vram_texture": true
 }
 
