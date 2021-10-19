@@ -63,6 +63,12 @@ window/vsync/use_vsync=false
 
 enabled=PackedStringArray("res://addons/godot-openvr/plugin.cfg")
 
+[importer_defaults]
+
+texture={
+"compress/mode": 2
+}
+
 [layer_names]
 
 3d_physics/layer_1="Environment"

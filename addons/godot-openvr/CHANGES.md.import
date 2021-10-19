@@ -3,12 +3,10 @@
 importer="Commonmark"
 type="CommonmarkData"
 uid="uid://c7rn2u0ywfhg"
-path="res://.godot/imported/CHANGES.md-4dc529a6d13ac766b3416d2e6e07d3f4.res"
+valid=false
 
 [deps]
 
 source_file="res://addons/godot-openvr/CHANGES.md"
-dest_files=["res://.godot/imported/CHANGES.md-4dc529a6d13ac766b3416d2e6e07d3f4.res"]
-
 [params]
 

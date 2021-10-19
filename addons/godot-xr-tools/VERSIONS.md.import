@@ -3,12 +3,10 @@
 importer="Commonmark"
 type="CommonmarkData"
 uid="uid://oo4a4t4lfk0"
-path="res://.godot/imported/VERSIONS.md-627f22c08592d1d2c55d3dda67e2d1ea.res"
+valid=false
 
 [deps]
 
 source_file="res://addons/godot-xr-tools/VERSIONS.md"
-dest_files=["res://.godot/imported/VERSIONS.md-627f22c08592d1d2c55d3dda67e2d1ea.res"]
-
 [params]
 
