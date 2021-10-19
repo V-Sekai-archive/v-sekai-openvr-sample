@@ -44,7 +44,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="OpenVR demo"
+config/name="V-Sekai OpenVR demo"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
