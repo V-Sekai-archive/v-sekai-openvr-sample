@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://q6q5vm017qlo"]
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://buxihxs4c5dbe"]
 
 [sub_resource type="VisualShaderNodeColorUniform" id="1"]
 default_input_values = []

@@ -1,0 +1,173 @@
+[gd_scene load_steps=23 format=3 uid="uid://dmfvtq1wubaxg"]
+
+[ext_resource type="Script" path="res://xr_sample/core/Main.gd" id="1_utweo"]
+[ext_resource type="Environment" uid="uid://n5h3o771tyth" path="res://environment.tres" id="2_tewhq"]
+[ext_resource type="PackedScene" uid="uid://c1lwn8ckewvro" path="res://addons/godot-openvr/scenes/ovr_first_person.tscn" id="3_k61he"]
+[ext_resource type="Script" path="res://xr_sample/core/player/HUD_Anchor.gd" id="4_024re"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/functions/Function_Direct_movement.tscn" id="5_cdtje"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/functions/Function_Teleport.tscn" id="6_qknh6"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/functions/Function_pointer.tscn" id="7_uhrre"]
+[ext_resource type="Script" path="res://xr_sample/core/player/right_controller.gd" id="8_xam2f"]
+[ext_resource type="PackedScene" uid="uid://dhcsolk3uwmy6" path="res://addons/godot-xr-tools/objects/Viewport_2D_in_3D.tscn" id="9_qxnpn"]
+[ext_resource type="PackedScene" path="res://xr_sample/core/player/ButtonStates.tscn" id="10_88e3o"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/functions/Function_Pickup.tscn" id="11_4tvbf"]
+[ext_resource type="Material" path="res://xr_sample/art/wahooney.itch.io/green_grid.tres" id="12_cub5b"]
+[ext_resource type="PackedScene" path="res://xr_sample/core/misc/Table.tscn" id="13_thx5t"]
+[ext_resource type="PackedScene" path="res://xr_sample/core/misc/Box.tscn" id="14_3xyld"]
+[ext_resource type="PackedScene" path="res://xr_sample/core/misc/Cup.tscn" id="15_scids"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_2ndrj"]
+size = Vector2(0.3, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ux7rk"]
+resource_local_to_scene = true
+transparency = 1
+no_depth_test = true
+shading_mode = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_jxy6n"]
+size = Vector3(0.01, 0.01, 0.01)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8pi1c"]
+albedo_color = Color(0.109804, 0.27451, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ynikn"]
+material = SubResource( "StandardMaterial3D_8pi1c" )
+size = Vector3(0.01, 0.01, 0.01)
+
+[sub_resource type="PlaneMesh" id="1"]
+material = ExtResource( "12_cub5b" )
+size = Vector2(400, 400)
+subdivide_width = 10
+subdivide_depth = 10
+
+[sub_resource type="BoxShape3D" id="2"]
+size = Vector3(1000, 2, 1000)
+
+[node name="Main" type="Node3D"]
+script = ExtResource( "1_utweo" )
+
+[node name="DirectionalLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.756623, -0.453791, -0.470739, 0.644498, 0.396268, 0.653907, -0.110198, -0.798151, 0.592293, 0, 4, 0)
+shadow_enabled = true
+shadow_bias = 0.01
+directional_shadow_max_distance = 50.0
+script = null
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( "2_tewhq" )
+script = null
+
+[node name="OVRFirstPerson" parent="." instance=ExtResource( "3_k61he" )]
+
+[node name="HUD_Anchor" parent="OVRFirstPerson" index="1"]
+script = ExtResource( "4_024re" )
+
+[node name="SubViewport" type="SubViewport" parent="OVRFirstPerson/HUD_Anchor" index="0"]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(300, 100)
+render_target_update_mode = 3
+script = null
+
+[node name="FPS" type="Label" parent="OVRFirstPerson/HUD_Anchor/SubViewport"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 72
+text = "FPS: 0"
+structured_text_bidi_override_options = []
+script = null
+
+[node name="FPSQuad" type="MeshInstance3D" parent="OVRFirstPerson/HUD_Anchor" index="1"]
+transform = Transform3D(0.965182, 0.11344, 0.235702, -0.0501897, 0.96464, -0.258746, -0.25672, 0.237907, 0.936747, -0.32241, 0.322052, -0.966649)
+mesh = SubResource( "QuadMesh_2ndrj" )
+surface_material_override/0 = SubResource( "StandardMaterial3D_ux7rk" )
+script = null
+
+[node name="TestCube" type="MeshInstance3D" parent="OVRFirstPerson/Left_Hand" index="1"]
+mesh = SubResource( "BoxMesh_jxy6n" )
+skeleton = NodePath("../../Right_Hand")
+surface_material_override/0 = null
+script = null
+
+[node name="Function_Direct_movement" parent="OVRFirstPerson/Right_Hand" index="0" instance=ExtResource( "5_cdtje" )]
+camera = NodePath("../../XRCamera3D")
+
+[node name="TestCube" type="MeshInstance3D" parent="OVRFirstPerson/Right_Hand" index="2"]
+mesh = SubResource( "BoxMesh_jxy6n" )
+surface_material_override/0 = null
+script = null
+
+[node name="aim_left_hand" type="XRController3D" parent="OVRFirstPerson"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.25, 0)
+tracker = &"left_hand"
+pose = &"aim"
+script = null
+
+[node name="TestCube" type="MeshInstance3D" parent="OVRFirstPerson/aim_left_hand"]
+mesh = SubResource( "BoxMesh_ynikn" )
+skeleton = NodePath("../../aim_right_hand")
+surface_material_override/0 = null
+script = null
+
+[node name="Function_Teleport" parent="OVRFirstPerson/aim_left_hand" instance=ExtResource( "6_qknh6" )]
+collision_mask = 1022
+camera = NodePath("../../XRCamera3D")
+
+[node name="Function_pointer" parent="OVRFirstPerson/aim_left_hand" instance=ExtResource( "7_uhrre" )]
+collision_mask = 2048
+
+[node name="aim_right_hand" type="XRController3D" parent="OVRFirstPerson"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.25, 0)
+tracker = &"right_hand"
+pose = &"aim"
+script = ExtResource( "8_xam2f" )
+
+[node name="TestCube" type="MeshInstance3D" parent="OVRFirstPerson/aim_right_hand"]
+mesh = SubResource( "BoxMesh_ynikn" )
+surface_material_override/0 = null
+script = null
+
+[node name="Viewport2Din3D" parent="OVRFirstPerson/aim_right_hand" instance=ExtResource( "9_qxnpn" )]
+transform = Transform3D(0.960079, 0.211887, -0.182625, -0.163522, 0.954819, 0.248155, 0.226955, -0.208384, 0.95135, 0.167837, 0, 0)
+screen_size = Vector2(0.3, 0.2)
+scene = ExtResource( "10_88e3o" )
+collision_layer = 2048
+
+[node name="Function_Pickup" parent="OVRFirstPerson/aim_right_hand" instance=ExtResource( "11_4tvbf" )]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 0
+script = null
+
+[node name="Mesh" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource( "1" )
+surface_material_override/0 = null
+script = null
+
+[node name="CollisionShape" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource( "2" )
+script = null
+
+[node name="Objects" type="Node3D" parent="."]
+script = null
+
+[node name="Table" parent="Objects" instance=ExtResource( "13_thx5t" )]
+
+[node name="Box01" parent="Objects" instance=ExtResource( "14_3xyld" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -2)
+
+[node name="Box02" parent="Objects" instance=ExtResource( "14_3xyld" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 0)
+
+[node name="Box03" parent="Objects" instance=ExtResource( "14_3xyld" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -1)
+
+[node name="Cup" parent="Objects" instance=ExtResource( "15_scids" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.702487, -6)
+
+[connection signal="button_pressed" from="OVRFirstPerson/aim_right_hand" to="OVRFirstPerson/aim_right_hand" method="_on_aim_right_hand_button_pressed"]
+
+[editable path="OVRFirstPerson"]

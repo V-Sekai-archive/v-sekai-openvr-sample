@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://xr_sample/core/player/Guardian.gd" id="1"]
+[ext_resource type="Texture" uid="uid://c1lir86v3l7om" path="res://xr_sample/art/wahooney.itch.io/white_grid.png" id="2"]
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+flags_unshaded = true
+flags_no_depth_test = true
+albedo_color = Color( 1, 1, 1, 0.388235 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="ArrayMesh" id=1]
+
+[node name="Guardian" type="MeshInstance"]
+material_override = SubResource( 2 )
+mesh = SubResource( 1 )
+script = ExtResource( 1 )
