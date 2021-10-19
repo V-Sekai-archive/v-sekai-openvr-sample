@@ -3,10 +3,12 @@
 importer="Commonmark"
 type="CommonmarkData"
 uid="uid://xx7vsd8wmf3u"
-valid=false
+path="res://.godot/imported/README.md-0cb8af3c29067e51e425e0d57b6fe3d3.res"
 
 [deps]
 
 source_file="res://addons/godot-openvr/meshes/README.md"
+dest_files=["res://.godot/imported/README.md-0cb8af3c29067e51e425e0d57b6fe3d3.res"]
+
 [params]
 

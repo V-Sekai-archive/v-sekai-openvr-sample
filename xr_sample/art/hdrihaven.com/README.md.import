@@ -3,10 +3,12 @@
 importer="Commonmark"
 type="CommonmarkData"
 uid="uid://dw7c2i505jjgf"
-valid=false
+path="res://.godot/imported/README.md-bdb591afe41ef895d6bf6128f807a7a7.res"
 
 [deps]
 
 source_file="res://xr_sample/art/hdrihaven.com/README.md"
+dest_files=["res://.godot/imported/README.md-bdb591afe41ef895d6bf6128f807a7a7.res"]
+
 [params]
 

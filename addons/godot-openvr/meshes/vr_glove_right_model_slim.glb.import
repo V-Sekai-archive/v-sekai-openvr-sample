@@ -4,11 +4,13 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ctmduxp8lfce7"
-valid=false
+path="res://.godot/imported/vr_glove_right_model_slim.glb-c6782795f1fc3235de97a5f6c8ba1231.scn"
 
 [deps]
 
 source_file="res://addons/godot-openvr/meshes/vr_glove_right_model_slim.glb"
+dest_files=["res://.godot/imported/vr_glove_right_model_slim.glb-c6782795f1fc3235de97a5f6c8ba1231.scn"]
+
 [params]
 
 nodes/root_type="Node3D"

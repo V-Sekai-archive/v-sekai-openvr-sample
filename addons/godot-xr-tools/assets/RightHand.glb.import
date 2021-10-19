@@ -4,11 +4,13 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dn4pu0v88meek"
-valid=false
+path="res://.godot/imported/RightHand.glb-b0ade3e24442d11ee987628909f601b4.scn"
 
 [deps]
 
 source_file="res://addons/godot-xr-tools/assets/RightHand.glb"
+dest_files=["res://.godot/imported/RightHand.glb-b0ade3e24442d11ee987628909f601b4.scn"]
+
 [params]
 
 nodes/root_type="Node3D"
