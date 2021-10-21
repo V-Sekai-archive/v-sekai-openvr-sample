@@ -88,7 +88,6 @@ common/physics_fps=90
 
 [rendering]
 
-driver/threads/thread_model=2
 textures/vram_compression/import_bptc=true
 vulkan/rendering/back_end=1
 xr/enabled=true

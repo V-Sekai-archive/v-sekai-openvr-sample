@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dhcsolk3uwmy6" path="res://addons/godot-xr-tools/objects/Viewport_2D_in_3D.tscn" id="9_qxnpn"]
 [ext_resource type="PackedScene" path="res://xr_sample/core/player/ButtonStates.tscn" id="10_88e3o"]
 [ext_resource type="PackedScene" path="res://addons/godot-xr-tools/functions/Function_Pickup.tscn" id="11_4tvbf"]
-[ext_resource type="Material" path="res://xr_sample/art/wahooney.itch.io/green_grid.tres" id="12_cub5b"]
+[ext_resource type="Material" uid="uid://djls41qri1oel" path="res://xr_sample/art/wahooney.itch.io/green_grid.tres" id="12_cub5b"]
 [ext_resource type="PackedScene" path="res://xr_sample/core/misc/Table.tscn" id="13_thx5t"]
 [ext_resource type="PackedScene" path="res://xr_sample/core/misc/Box.tscn" id="14_3xyld"]
 [ext_resource type="PackedScene" path="res://xr_sample/core/misc/Cup.tscn" id="15_scids"]

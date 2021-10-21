@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://djls41qri1oel"]
 
-[ext_resource type="Texture2D" path="res://xr_sample/art/wahooney.itch.io/green_grid.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://qg5scypev53b" path="res://xr_sample/art/wahooney.itch.io/green_grid.png" id="1"]
 
 [resource]
 diffuse_mode = 1
