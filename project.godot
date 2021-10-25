@@ -64,6 +64,10 @@ window/vsync/use_vsync=true
 
 enabled=PackedStringArray("res://addons/godot-openvr/plugin.cfg")
 
+[gui]
+
+theme/use_hidpi=true
+
 [importer_defaults]
 
 texture={
