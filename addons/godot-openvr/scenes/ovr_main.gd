@@ -20,41 +20,41 @@ class_name OVRMain3D
 # Convenience setting for setting physics update rate to a multiple of our HMDs frame rate (set to 0 to ignore)
 @export var physics_factor : float = 2
 
-var xr_interface : XRInterfaceOpenVR = null
-func get_xr_interface() -> XRInterfaceOpenVR:
+var xr_interface : XRInterfaceOpenXR = XRInterfaceOpenXR.new()
+func get_xr_interface() -> XRInterfaceOpenXR:
 	return xr_interface
 
 func _ready():
 	# Find the interface and initialise
-	xr_interface = XRServer.find_interface("OpenVR")
-	if xr_interface:
-		# Configure our interface before initializing
-		xr_interface.default_action_set = default_action_set
+	XRServer.add_interface(xr_interface)
+	
+	# Configure our interface before initializing
+#	xr_interface.default_action_set = default_action_set
 
-		if xr_interface.initialize():
-			# We can't query our HMDs refresh rate just yet so we hardcode this to 90
-			var refresh_rate = 90
+	if xr_interface.initialize():
+		# We can't query our HMDs refresh rate just yet so we hardcode this to 90
+		var refresh_rate = 90
 
-			# check our viewport
-			var vp : Viewport
-			if viewport:
-				vp = get_node(viewport)
-				if vp:
-					# We copy this, while the ARVRServer will resize the size of the viewport automatically
-					# it can't feed it back into the node. 
-					vp.size = xr_interface.get_render_targetsize()
+		# check our viewport
+		var vp : Viewport
+		if viewport:
+			vp = get_node(viewport)
+			if vp:
+				# We copy this, while the ARVRServer will resize the size of the viewport automatically
+				# it can't feed it back into the node. 
+				vp.size = xr_interface.get_render_targetsize()
 
-			# No viewport? get our main viewport
-			if !vp:
-				vp = get_viewport()
+		# No viewport? get our main viewport
+		if !vp:
+			vp = get_viewport()
 
-			# switch to ARVR mode
-			vp.use_xr = true
+		# switch to ARVR mode
+		vp.use_xr = true
 
-			# make sure vsync is disabled or we'll be limited to 60fps
-			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+		# make sure vsync is disabled or we'll be limited to 60fps
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 
-			if physics_factor > 0:
-				# Set our physics to a multiple of our refresh rate to get in sync with our rendering
-				Engine.physics_ticks_per_second = refresh_rate * physics_factor
+		if physics_factor > 0:
+			# Set our physics to a multiple of our refresh rate to get in sync with our rendering
+			Engine.physics_ticks_per_second = refresh_rate * physics_factor
 
