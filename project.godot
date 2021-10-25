@@ -57,6 +57,7 @@ file_logging/enable_file_logging=true
 window/size/width=800
 window/size/height=500
 window/dpi/allow_hidpi=true
+window/vsync/vsync_mode=3
 window/vsync/use_vsync=true
 
 [editor_plugins]
@@ -84,7 +85,10 @@ paths=["res://addons/godot-openvr/godot_openvr.gdextension"]
 
 [physics]
 
-common/physics_fps=90
+2d/run_on_thread=true
+3d/run_on_thread=true
+common/physics_ticks_per_second=144
+common/physics_fps=144
 
 [rendering]
 
