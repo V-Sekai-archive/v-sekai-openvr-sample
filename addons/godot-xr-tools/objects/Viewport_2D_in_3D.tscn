@@ -7,13 +7,14 @@
 resource_local_to_scene = true
 size = Vector2(3, 2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_nxqt7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_371og"]
+viewport_path = NodePath("Viewport")
 
 [sub_resource type="StandardMaterial3D" id="3"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource( "ViewportTexture_nxqt7" )
+albedo_texture = SubResource( "ViewportTexture_371og" )
 
 [sub_resource type="BoxShape3D" id="2"]
 resource_local_to_scene = true
