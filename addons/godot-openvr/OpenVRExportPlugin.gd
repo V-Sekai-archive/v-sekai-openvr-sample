@@ -4,7 +4,6 @@ extends EditorExportPlugin
 func _export_begin(features: PackedStringArray, is_debug: bool, path: String, flags: int ):
 	var dir = Directory.new()
 	
-	# we just want the path
 	var export_to = path.get_base_dir() + "/actions/"
 	
 	# now determine which action files to export
@@ -16,8 +15,7 @@ func _export_begin(features: PackedStringArray, is_debug: bool, path: String, fl
 	else:
 		print("WARNING: Couldn't locate actions files to export")
 		return
-	
-	# print("Exporting " + export_from +" to " + export_to)
+
 	if !dir.dir_exists(export_to):
 		dir.make_dir(export_to)
 	
@@ -32,9 +30,3 @@ func _export_begin(features: PackedStringArray, is_debug: bool, path: String, fl
 			filename = dir.get_next()
 		
 		dir.list_dir_end()
-
-#func _export_end():
-#	print("Export ended")
-
-#func _export_file(path: String, type: String, features: PoolStringArray):
-#	print("Export " + path)
